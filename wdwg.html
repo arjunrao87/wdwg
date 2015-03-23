@@ -1,0 +1,104 @@
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Where do we go?</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="col-xs-12 centrify">
+				<header ><h1>Where do we go?</h1></header>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="col-xs-6">
+				{{> preferences}}
+			</div>
+			<div class="col-xs-6">
+				{{> result}}
+			</div>
+		</div>
+	</div>
+</body>
+
+<template name="preferences">
+	<form>
+		<div class="container-fluid">
+			<header class = "centrify"><h2>Preferences</h2></header>
+			<br>
+			<div class="row-fluid">
+				<div class="col-xs-4">
+					<b><p>Distance</p></b>
+			 		<div class="radio">
+					  <label><input type="radio" name="distance" value="500"> &lt; 5 mins walk</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="distance" value="1500">&lt; 15 mins walk</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="distance" value="16000">&lt;15 mins drive</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="distance" value="32000">&lt; 30 mins drive</label>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<b><p> Alcohol type</p></b>
+					<div class="radio">
+					 	<label><input type="radio" name="alcohol" value="whisky">Whisky</label>
+					</div>
+					<div class="radio">
+					 	<label><input type="radio" name="alcohol" value="wine">Wine</label>
+					</div>
+					<div class="radio">
+					 	<label><input type="radio" name="alcohol" value="beer">Beer</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="alcohol" value="vodka">Vodka</label>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<b><p> Cost</p></b>
+					<div class="radio">
+					  <label><input type="radio" name="cost" value="1">$</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="cost" value="2">$$</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="cost" value="3">$$$</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="cost" value="4">$$$$</label>
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="col-xs-12 centrify">
+					<input style="width: 10em;  height: 2em;" type="submit" value="Find">
+				</div>
+			</div>
+		</div>
+	</form>
+</template>
+
+<template name="result">
+	<header class="centrify"><h2>Result</h2></header>
+	<br>
+	Name          : {{name}}
+	<br>
+	Type of Place : {{type}}
+	<br>
+	Rating        : {{rating}}
+	<br>
+	People here currently : {{count}}
+	<br>
+	Address : {{address}}
+	<br>
+	Location : {{location}}
+	<br>
+</template>

@@ -1,0 +1,14 @@
+/*/* CSS declarations go here */
+.map-container {
+  width: 200px;
+  max-width: 100%;
+  height: 200px;
+}
+.spacer {
+    margin-top: 50%; /* define margin as you see fit */
+}
+.centrify{
+	width:100%;
+	margin:0 auto;
+	margin-left:25%;
+}
